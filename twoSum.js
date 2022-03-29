@@ -9,12 +9,8 @@ const targetInput = -8;
 var twoSum = function(nums, target) {
     var outputArray = [];
     for (let i = 0; i<nums.length; i++){
-        var possibleSecondNumber = (nums[i] - target)
-        if ((target < 0 && possibleSecondNumber>0)||(possibleSecondNumber<0)){
-            possibleSecondNumber = possibleSecondNumber*-1
-        }
         for (let y = i+1; y<nums.length; y++){
-            if (nums[y] == possibleSecondNumber){
+            if (nums[i] + nums[y] == target){
                 outputArray.push(i);
                 outputArray.push(y);
                 return outputArray;
