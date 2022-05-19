@@ -7,7 +7,7 @@
  * @return {number}
  */
  var maxSubArray = function(nums) {
-    let largest = -Infinity;
+    let largest = nums[0];
     let potential = nums[0];
     let k = 1;
     if(nums.length == 1){
